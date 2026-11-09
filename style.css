@@ -1,0 +1,115 @@
+/* The CheerLights page on GitHub: the same ink and ground as the install page, so the two read as one site. */
+:root {
+  --ground: #f3f4f1;
+  --ink: #16181b;
+  --muted: #4c5056;
+  --line: #d4d6d1;
+  --link: #1f4fd1;
+  --focus: #306bfe;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ground: #141517;
+    --ink: #e9eae6;
+    --muted: #a9ada6;
+    --line: #34373b;
+    --link: #8fb0ff;
+    --focus: #6f97ff;
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font: 400 17px/1.55 "Source Sans 3", system-ui, sans-serif;
+}
+
+.top, main, .foot {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.top { padding-top: 24px; }
+.home { display: inline-block; }
+.home img { display: block; height: 40px; width: auto; }
+
+h1 {
+  font-size: 72px;
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  margin: 56px 0 20px;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 1.2;
+  margin: 56px 0 8px;
+}
+
+p { margin: 0 0 12px; text-wrap: pretty; max-width: 62ch; }
+.lead { font-size: 22px; line-height: 1.4; }
+.small { color: var(--muted); font-size: 15px; }
+
+a { color: var(--link); text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 2px; }
+
+.live {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+  font-weight: 600;
+}
+
+.swatch {
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+}
+
+.links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.links li {
+  display: grid;
+  grid-template-columns: 13rem 1fr;
+  gap: 4px 24px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.links a { font-weight: 600; }
+.links span { color: var(--ink); }
+
+code {
+  font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+  font-size: 0.88em;
+  white-space: nowrap;
+}
+
+.links + .small { margin-top: 16px; }
+
+.foot { padding-top: 64px; padding-bottom: 40px; }
+
+@media (max-width: 600px) {
+  h1 { font-size: 52px; margin-top: 40px; }
+  .lead { font-size: 19px; }
+  h2 { margin-top: 44px; }
+  .links li { grid-template-columns: 1fr; }
+  .top, main, .foot { padding: 0 16px; }
+  .top { padding-top: 16px; }
+  .foot { padding-top: 48px; padding-bottom: 32px; }
+}

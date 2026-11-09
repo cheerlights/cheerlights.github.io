@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CheerLights on GitHub</title>
+  <meta name="description" content="Where to find CheerLights: the website, the API docs, the blog, Discord, the Bluetooth light install page, and the code libraries.">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="favicon-32.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="home" href="https://cheerlights.com">
+      <picture>
+        <source srcset="cheerlights-logo-dark.svg" media="(prefers-color-scheme: dark)">
+        <img src="cheerlights-logo.svg" alt="CheerLights" width="168" height="40">
+      </picture>
+    </a>
+  </header>
+
+  <main>
+    <h1>CheerLights</h1>
+    <p class="lead">Lights all over the world share one color. Anyone can change it, and every connected light follows.</p>
+    <p id="live" class="live" hidden><span id="live-swatch" class="swatch" aria-hidden="true"></span><span id="live-text"></span></p>
+
+    <section>
+      <h2>On cheerlights.com</h2>
+      <ul class="links">
+        <li><a href="https://cheerlights.com">CheerLights website</a><span>What CheerLights is, and the newest projects.</span></li>
+        <li><a href="https://cheerlights.com/learn/">Learn page and API</a><span>How to change the color, and how to read it from your own code.</span></li>
+        <li><a href="https://cheerlights.com/build/">Build a display</a><span>Guides for making a light that follows the color.</span></li>
+        <li><a href="https://cheerlights.com/blog/">Blog</a><span>Project write-ups, tutorials, and news.</span></li>
+        <li><a href="https://cheerlights.com/discord">Discord</a><span>Set the color, talk with other builders, and show what you made.</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Set up a Bluetooth light</h2>
+      <ul class="links">
+        <li><a href="cheerlights-esp32-ble/">Install page</a><span>Set up an ESP32 light from Chrome or Edge on a computer. The CheerLights app for Android sends it the color.</span></li>
+        <li><a href="https://github.com/cheerlights/cheerlights-esp32-ble">Firmware source</a><span>The ESP32 firmware, its Bluetooth profile, and the board presets.</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Code on GitHub</h2>
+      <ul class="links">
+        <li><a href="https://github.com/cheerlights/cheerlights-arduino-library">Arduino library</a><span>Fetch the latest color over Wi-Fi in an Arduino sketch.</span></li>
+        <li><a href="https://github.com/cheerlights/cheerlights-python-package">Python package</a><span>Read the live color, its history, and the palette. <code>pip install cheerlights-api</code></span></li>
+        <li><a href="https://github.com/cheerlights/cheerlights-matlab-package">MATLAB package</a><span>Read the live color, its history, and the palette in MATLAB.</span></li>
+        <li><a href="https://github.com/cheerlights/cheerlights-javascript-widgets">JavaScript widgets</a><span>Show the current color on a web page.</span></li>
+        <li><a href="https://github.com/cheerlights/cheerlights-mcp">MCP server</a><span>Let AI tools read the color through the Model Context Protocol.</span></li>
+        <li><a href="https://github.com/cheerlights/raspberry-pi-pico-w">Raspberry Pi Pico W</a><span>Connect a Pico W to CheerLights.</span></li>
+        <li><a href="https://github.com/cheerlights/cheerorbs">CheerOrbs</a><span>Build a DIY CheerLights display and learn the basics of IoT.</span></li>
+        <li><a href="https://github.com/cheerlights/cheerlights-terminal">CheerLights Terminal</a><span>The current color in ASCII art, in your terminal.</span></li>
+      </ul>
+      <p class="small">Everything else is at <a href="https://github.com/cheerlights">github.com/cheerlights</a>.</p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p class="small">CheerLights has run since 2011. Source for this page: <a href="https://github.com/cheerlights/cheerlights.github.io">cheerlights/cheerlights.github.io</a>.</p>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
